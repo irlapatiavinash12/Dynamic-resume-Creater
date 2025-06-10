@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b63a0a86f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container" id="mainContainer">
+        <h1 class="heading-element">Resume Creator</h1>
+        <div class="each-input-container">
+            <label class="label-styling" for="name">Name</label>
+            <input type="text" class="input-styling" id="name"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="email">Email</label>
+            <input type="text" class="input-styling" id="email"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="mobile">Phone</label>
+            <input type="text" class="input-styling" id="mobile"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="linkedin">LinkedIn Profile(URL)</label>
+            <input type="text" class="input-styling" id="linkedin"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="photo">Profile Photo</label>
+            <input type="file" class="" id="photo"/>
+        </div>
+        <!-- <div class="each-input-container">
+            <label class="label-styling" for="mobile">Phone</label>
+            <input type="text" class="input-styling" id="mobile"/>
+        </div> -->
+        <h1>Profile Summary</h1>
+        <div class="each-input-container">
+            <label class="label-styling" for="summary">Summary</label>
+            <textarea cols=120 rows=10 id="summary"></textarea>
+        </div>
+        <h1>Education</h1>
+        <div class="each-input-container">
+            <label class="label-styling" for="college">College Name</label>
+            <input type="text" class="input-styling" id="college"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="degree">Degree/Field</label>
+            <input type="text" class="input-styling" id="degree"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="starting">Year of Start</label>
+            <input type="text" class="input-styling" id="starting"/>
+        </div>
+        <div class="each-input-container">
+            <label class="label-styling" for="completion">Year of Completion</label>
+            <input type="text" class="input-styling" id="completion"/>
+        </div>
+        <h1>Skills</h1>
+        <div class="each-input-container">
+            <label class="label-styling" for="skills">skills</label>
+            <input type="text" class="input-styling" id="skills"/>
+        </div>
+        <h1>Projects/Acheivements</h1>
+        <div id = "projectInputsContainer" class="projects-container">
+            <div class="each-input-container">
+                <label class="label-styling" for="projectTitle">Title</label>
+                <input type="text" class="each-Project-input" id="projectTitle"/>
+            </div>
+            <div class="each-input-container">
+                <label class="label-styling" for="projectDescription">Description</label>
+                <textarea cols=120 rows=10 id="projectDescription" class="each-project-text-area"></textarea>
+            </div>
+        </div>
+        <div class="add-button-container">
+            <button class="add-project-button" type="button" id="addProjectButton">Add Project</button>
+        </div>
+        <div class="button-container" id="buttonsContainer">
+            <button id="previewButton">Preview</button>
+            <button id="printResume" onclick="window.print()">Print Resume</button>
+            <button id="exportPdf" onclick="window.print()">Export AS PDF</button>
+            <button id="darkMode">Dark Mode</button>
+        </div>
+    </div>
+    <div id="previewContainer" class="a4-page">
+
+    </div>
+  
+    <script src="index.js"></script>
+</body>
+</html>
