@@ -1,0 +1,64 @@
+[1mdiff --git a/index.css b/index.css[m
+[1mindex 26d7f3a..17bc8b1 100644[m
+[1m--- a/index.css[m
+[1m+++ b/index.css[m
+[36m@@ -226,3 +226,11 @@[m [mp{[m
+     text-align: left;[m
+ }[m
+ [m
+[32m+[m[41m[m
+[32m+[m[32m#errorContainer{[m[41m[m
+[32m+[m[32m    text-align: center;[m[41m[m
+[32m+[m[32m    font-size: 24px;[m[41m[m
+[32m+[m[32m    font-family: sans-serif;[m[41m[m
+[32m+[m[32m    margin-top: 20px;[m[41m[m
+[32m+[m[32m}[m[41m[m
+[32m+[m[41m[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex f7fc9cc..e235990 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -81,6 +81,9 @@[m
+             <button id="exportPdf" onclick="window.print()">Export AS PDF</button>[m
+             <button id="darkMode">Dark Mode</button>[m
+         </div>[m
+[32m+[m[32m    </div>[m[41m[m
+[32m+[m[32m    <div id="errorContainer">[m[41m[m
+[32m+[m[41m[m
+     </div>[m
+     <div id="previewContainer" class="a4-page">[m
+ [m
+[1mdiff --git a/index.js b/index.js[m
+[1mindex 3d21d13..920f38f 100644[m
+[1m--- a/index.js[m
+[1m+++ b/index.js[m
+[36m@@ -32,7 +32,7 @@[m [mconst buttonsContainer = document.getElementById("buttonsContainer");[m
+ [m
+ const mainContainer = document.getElementById("mainContainer");[m
+ [m
+[31m-[m
+[32m+[m[32mconst errorContainer = document.getElementById("errorContainer");[m[41m[m
+ [m
+ let isDarkMode = false [m
+ [m
+[36m@@ -225,15 +225,17 @@[m [mfunction renderPreview() {[m
+ previewButton.addEventListener("click",() => {[m
+ [m
+     if (inputName.value !== "" && mobile.value!==""&& linkedin.value && college.value!== "" && starting.value !== "" && completion.value!==""&& skills.value !== "" && projectTitle.value!== "" && projectDescription.value !== ""){[m
+[32m+[m[32m        errorContainer.textContent = "";[m[41m[m
+         renderPreview()[m
+     }[m
+     else{[m
+[31m-[m
+[31m-        const errorMessage = document.getElementById("buttonsContainer");[m
+[32m+[m[41m        [m
+[32m+[m[41m        [m
+[32m+[m[32m        const errorMessage = document.createElement("p");[m[41m[m
+         errorMessage.textContent = "Fill all the Fields"[m
+         errorMessage.style.color = "red"[m
+         errorMessage.textAlign = "center"[m
+[31m-        buttonsContainer.appendChild(errorMessage);[m
+[32m+[m[32m        errorContainer.appendChild(errorMessage);[m[41m[m
+ [m
+     }[m
+ [m

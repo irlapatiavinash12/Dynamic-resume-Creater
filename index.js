@@ -230,7 +230,7 @@ previewButton.addEventListener("click",() => {
     }
     else{
         
-        
+        errorContainer.innerHTML = ""; 
         const errorMessage = document.createElement("p");
         errorMessage.textContent = "Fill all the Fields"
         errorMessage.style.color = "red"
