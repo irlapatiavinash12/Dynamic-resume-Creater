@@ -32,7 +32,7 @@ const buttonsContainer = document.getElementById("buttonsContainer");
 
 const mainContainer = document.getElementById("mainContainer");
 
-
+const errorContainer = document.getElementById("errorContainer");
 
 let isDarkMode = false 
 
@@ -225,15 +225,17 @@ function renderPreview() {
 previewButton.addEventListener("click",() => {
 
     if (inputName.value !== "" && mobile.value!==""&& linkedin.value && college.value!== "" && starting.value !== "" && completion.value!==""&& skills.value !== "" && projectTitle.value!== "" && projectDescription.value !== ""){
+        errorContainer.textContent = "";
         renderPreview()
     }
     else{
-
-        const errorMessage = document.getElementById("buttonsContainer");
+        
+        
+        const errorMessage = document.createElement("p");
         errorMessage.textContent = "Fill all the Fields"
         errorMessage.style.color = "red"
         errorMessage.textAlign = "center"
-        buttonsContainer.appendChild(errorMessage);
+        errorContainer.appendChild(errorMessage);
 
     }
 

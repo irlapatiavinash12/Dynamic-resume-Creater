@@ -226,3 +226,11 @@ p{
     text-align: left;
 }
 
+
+#errorContainer{
+    text-align: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
